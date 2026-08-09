@@ -1,0 +1,25 @@
+# Environment
+.env
+*.env
+
+# Go build artifacts
+/bin/
+shopease-server
+shopease-server.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Upload temp files
+uploads/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

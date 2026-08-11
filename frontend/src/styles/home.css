@@ -1,0 +1,78 @@
+/* home.css – hero banner, featured products, grid */
+.home-container {
+  background-color: #ffffff;
+}
+
+/* Hero banner – full width with soft gradient */
+.hero-banner {
+  background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e1e2a, #4a4a5a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  color: #5a5a66;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Featured products heading */
+.home-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 3rem 0 1.5rem;
+  color: #1e1e2a;
+  position: relative;
+}
+
+.home-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff3e6c;
+  margin: 0.5rem auto 0;
+  border-radius: 4px;
+}
+
+/* Product grid – responsive cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Optional: loading spinner styling */
+.home-container div:contains('Loading') {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1rem;
+  color: #7c7c8a;
+}
+
+@media (max-width: 640px) {
+  .hero-banner h1 {
+    font-size: 2rem;
+  }
+  .product-grid {
+    gap: 1rem;
+    padding: 0 1rem 2rem;
+  }
+}

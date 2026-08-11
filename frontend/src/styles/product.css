@@ -1,0 +1,196 @@
+/* ===========================
+   SHOP PAGE
+=========================== */
+
+.shop-container{
+  max-width:1400px;
+  margin:auto;
+  padding:2rem;
+  min-height:80vh;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.shop-header{
+  text-align:center;
+  margin-bottom:2.5rem;
+}
+
+.shop-header h1{
+  font-size:2.75rem;
+  font-weight:800;
+  color:#111827;
+  margin-bottom:.75rem;
+}
+
+.shop-header p{
+  color:#6b7280;
+  font-size:1.05rem;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-wrapper{
+  position:relative;
+  max-width:600px;
+  margin:0 auto 1.5rem auto;
+}
+
+.search-icon{
+  position:absolute;
+  left:18px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#9ca3af;
+}
+
+.search-bar{
+  width:100%;
+
+  padding:
+    1rem
+    1rem
+    1rem
+    3rem;
+
+  border:1px solid #d1d5db;
+
+  border-radius:16px;
+
+  font-size:.95rem;
+
+  background:white;
+
+  transition:.3s ease;
+}
+
+.search-bar:focus{
+  outline:none;
+
+  border-color:#ff3f6c;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(255,63,108,.15);
+}
+
+/* ===========================
+   RESULTS
+=========================== */
+
+.results-count{
+  color:#6b7280;
+  font-weight:500;
+  margin-bottom:2rem;
+}
+
+/* ===========================
+   PRODUCT GRID
+=========================== */
+
+.product-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fill,minmax(260px,1fr));
+
+  gap:1.75rem;
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+.loading-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  padding:6rem 0;
+
+  color:#6b7280;
+}
+
+.loader{
+  width:50px;
+  height:50px;
+
+  border:4px solid #f3f4f6;
+  border-top:4px solid #ff3f6c;
+
+  border-radius:50%;
+
+  animation:spin 1s linear infinite;
+
+  margin-bottom:1rem;
+}
+
+@keyframes spin{
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.empty-state{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  padding:5rem 1rem;
+
+  color:#6b7280;
+
+  text-align:center;
+}
+
+.empty-state svg{
+  margin-bottom:1rem;
+  color:#9ca3af;
+}
+
+.empty-state h2{
+  color:#111827;
+  margin-bottom:.5rem;
+}
+
+.empty-state p{
+  color:#6b7280;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+  .shop-container{
+    padding:1rem;
+  }
+
+  .shop-header h1{
+    font-size:2rem;
+  }
+
+  .shop-header p{
+    font-size:.95rem;
+  }
+
+  .product-grid{
+    gap:1rem;
+  }
+
+}

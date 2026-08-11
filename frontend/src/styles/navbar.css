@@ -1,0 +1,184 @@
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  height:72px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 3rem;
+
+  background:#ffffff;
+
+  border-bottom:1px solid #e5e7eb;
+
+  box-shadow:
+    0 1px 2px rgba(0,0,0,.04),
+    0 4px 12px rgba(0,0,0,.03);
+}
+
+/* ---------- Logo ---------- */
+
+.brand-link{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+
+.navbar-logo{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+}
+
+.brand-name{
+  font-size:1.35rem;
+  font-weight:700;
+  color:#111827;
+  letter-spacing:-0.5px;
+}
+
+/* ---------- Links ---------- */
+
+.navbar-links{
+  display:flex;
+  align-items:center;
+  gap:1.5rem;
+}
+
+.nav-link{
+  position:relative;
+
+  font-size:.95rem;
+  font-weight:500;
+
+  color:#374151;
+
+  transition:all .25s ease;
+}
+
+.nav-link:hover{
+  color:#ff3f6c;
+}
+
+/* Myntra style underline */
+
+.nav-link::after{
+  content:"";
+
+  position:absolute;
+  left:0;
+  bottom:-8px;
+
+  width:0;
+  height:2px;
+
+  background:#ff3f6c;
+
+  transition:width .25s ease;
+}
+
+.nav-link:hover::after{
+  width:100%;
+}
+
+/* ---------- Cart ---------- */
+
+.cart-link{
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+}
+
+.cart-count{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  width:20px;
+  height:20px;
+
+  font-size:.75rem;
+  font-weight:600;
+
+  border-radius:999px;
+
+  background:#ff3f6c;
+  color:white;
+}
+
+/* ---------- Admin ---------- */
+
+.admin-link{
+  color:#2563eb;
+  font-weight:600;
+}
+
+/* ---------- Login ---------- */
+
+.btn-login{
+  padding:.7rem 1.25rem;
+
+  border-radius:10px;
+
+  background:#111827;
+  color:white;
+
+  font-weight:600;
+
+  transition:.25s ease;
+}
+
+.btn-login:hover{
+  transform:translateY(-1px);
+  background:#000;
+}
+
+/* ---------- Logout ---------- */
+
+.btn-logout{
+  padding:.7rem 1.2rem;
+
+  border-radius:10px;
+
+  background:#fee2e2;
+  color:#dc2626;
+
+  font-weight:600;
+
+  transition:.25s ease;
+}
+
+.btn-logout:hover{
+  background:#fecaca;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px){
+
+  .navbar{
+    padding:0 1rem;
+  }
+
+  .navbar-links{
+    gap:.8rem;
+  }
+
+  .brand-name{
+    display:none;
+  }
+
+  .nav-link{
+    font-size:.85rem;
+  }
+
+  .btn-login,
+  .btn-logout{
+    padding:.55rem .8rem;
+    font-size:.85rem;
+  }
+}
